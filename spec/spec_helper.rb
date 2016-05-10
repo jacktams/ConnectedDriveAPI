@@ -1,5 +1,14 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
+require 'simplecov'
+
+SimpleCov.formatters = [
+    SimpleCov::Formatter::HTMLFormatter,
+]
+SimpleCov.start do
+  add_filter 'spec'
+end
+
 require 'dotenv'
 require 'faker'
 require 'vcr'
