@@ -1,12 +1,13 @@
 module ConnectedDriveAPI
   class ChargingPOI
-    attr_reader: api
+    
+    attr_reader :api
     
     def initialize( api )
       @api = api
     end
     
-    def searchPOI(lat, long, radius=20)
+    def searchPOI( lat, long, radius=20 )
       api.get("/chargingstations/searchstatic",
         body: {
           "lat" => lat,
@@ -16,8 +17,8 @@ module ConnectedDriveAPI
       )
     end
     
-    def getChargeStationInfo(ids)
-      
+    def getChargeStationInfo( ids )
+      ids
     end
   end
 end

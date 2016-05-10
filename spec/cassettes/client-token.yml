@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://b2vapi.bmwgroup.com/webapi/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&scope=remote_services%20vehicle_data&username=<BMW_USER>&password=<BMW_PASSWORD>
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Basic <BMW_CLIENT_ID>
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 08:25:00 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      X-Correlationid:
+      - Id-dc9a3157a1f55600000000003c68792f 0
+      X-Nodeid:
+      - '02'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"access_token\": \"SAEH0XabdnCUlb5nmekaDXirZBTW4hvf\",\r\n
+        \ \"token_type\": \"Bearer\",\r\n  \"expires_in\": 28800,\r\n  \"refresh_token\":
+        \"3w4toDpraJyUBDT90HAh8whvyAekXLgsNc6qNXHyXVQ7R3aO\",\r\n  \"scope\": \"vehicle_data
+        remote_services\"\r\n}"
+    http_version: 
+  recorded_at: Tue, 10 May 2016 08:25:02 GMT
+- request:
+    method: post
+    uri: https://b2vapi.bmwgroup.com/webapi/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=refresh_token&refresh_token=3w4toDpraJyUBDT90HAh8whvyAekXLgsNc6qNXHyXVQ7R3aO
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Basic <BMW_CLIENT_ID>
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 08:25:01 GMT
+      Server:
+      - BMW Group API Gateway
+      X-Correlationid:
+      - Id-dd9a3157700358000000000075d73505 0
+      X-Nodeid:
+      - '01'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "access_token" : "vaAV22K9x8XchhR8CRrczTj1fOL3ANTa",
+          "token_type" : "Bearer",
+          "expires_in" : 28800,
+          "refresh_token" : "2nhXcBA9A8EntnAw1lLKoNXdtjiM9RlnLzfRMyRHOkCxz5or",
+          "scope" : "vehicle_data remote_services"
+        }
+    http_version: 
+  recorded_at: Tue, 10 May 2016 08:25:02 GMT
+recorded_with: VCR 3.0.1

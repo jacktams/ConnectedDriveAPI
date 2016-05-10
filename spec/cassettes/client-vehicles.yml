@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer Y9FwHAwDsChGnVWLO5TtYMe5Gsgi5SP8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 08:24:59 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      X-Correlationid:
+      - Id-db9a31579bf556000000000007467667 0
+      X-Nodeid:
+      - '02'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"vehicles":[{"vin":"<VIN>","model":"I3 (+ REX)","bodytype":"I01","driveTrain":"BEV_REX","color":"ARRAVANIGRAU/BMW
+        I BLAU","colorCode":"B74","brand":"BMW_I","licensePlate":"<REG>","yearOfConstruction":2014,"statisticsCommunityEnabled":true,"statisticsAvailable":true,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"BMW
+        UK Ltd","street":"Summit ONE","postalCode":"GU14 0FB","city":"Farnborough","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"ACTIVATED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"ACTIVATED","doorLock":"ACTIVATED","doorUnlock":"ACTIVATED","climateControl":"NOT_SUPPORTED","climateNow":"ACTIVATED","chargingControl":"WEEKLY_PLANNER","chargeNow":"NOT_SUPPORTED","sendPoi":"ACTIVATED","rangeMap":"RANGE_POLYGON","lastDestinations":"SUPPORTED","intermodalRouting":"AVAILABLE","climateFunction":"AIRCONDITIONING","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","supportedChargingModes":["AC_LOW","AC_HIGH"],"lscType":"I_LSC_IMM"},{"vin":"<VIN>","model":"X1
+        X18D","bodytype":"E84","driveTrain":"CONV","fuelType":"DIESEL","color":"VALENCIA
+        ORANGE METALLIC","colorCode":"B44","brand":"BMW","licensePlate":"<REG>","yearOfConstruction":2014,"statisticsCommunityEnabled":false,"statisticsAvailable":false,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"Stratstone
+        Leeds","street":"Gelderd Road","postalCode":"LS12 6EG","city":"Leeds","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"NOT_SUPPORTED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"NOT_SUPPORTED","doorLock":"NOT_SUPPORTED","doorUnlock":"NOT_SUPPORTED","climateControl":"NOT_SUPPORTED","climateNow":"NOT_SUPPORTED","chargingControl":"NOT_SUPPORTED","chargeNow":"NOT_SUPPORTED","sendPoi":"NOT_SUPPORTED","rangeMap":"NOT_SUPPORTED","lastDestinations":"NOT_SUPPORTED","intermodalRouting":"NOT_AVAILABLE","climateFunction":"VENTILATION","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","lscType":"NOT_SUPPORTED"}]}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 08:25:01 GMT
+recorded_with: VCR 3.0.1
