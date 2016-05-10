@@ -1,0 +1,329 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://b2vapi.bmwgroup.com/webapi/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&scope=remote_services%20vehicle_data&username=<BMW_USER>&password=<BMW_PASSWORD>
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Basic <BMW_CLIENT_ID>
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:22 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      X-Nodeid:
+      - '02'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"access_token\": \"iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl\",\r\n
+        \ \"token_type\": \"Bearer\",\r\n  \"expires_in\": 28799,\r\n  \"refresh_token\":
+        \"Te31C2UQlvZ2yMwdp37mgLVkOQ871S5Bh3PN4rS1r5RPKNKc\",\r\n  \"scope\": \"vehicle_data
+        remote_services\"\r\n}"
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:22 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:22 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
+      X-Nodeid:
+      - '01'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"vehicles":[{"vin":"WZY1Z42090V247772","model":"I3 (+ REX)","bodytype":"I01","driveTrain":"BEV_REX","color":"ARRAVANIGRAU/BMW
+        I BLAU","colorCode":"B74","brand":"BMW_I","licensePlate":"YY18XXX","yearOfConstruction":2014,"statisticsCommunityEnabled":true,"statisticsAvailable":true,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"BMW
+        UK Ltd","street":"Summit ONE","postalCode":"GU14 0FB","city":"Farnborough","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"ACTIVATED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"ACTIVATED","doorLock":"ACTIVATED","doorUnlock":"ACTIVATED","climateControl":"NOT_SUPPORTED","climateNow":"ACTIVATED","chargingControl":"WEEKLY_PLANNER","chargeNow":"NOT_SUPPORTED","sendPoi":"ACTIVATED","rangeMap":"RANGE_POLYGON","lastDestinations":"SUPPORTED","intermodalRouting":"AVAILABLE","climateFunction":"AIRCONDITIONING","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","supportedChargingModes":["AC_LOW","AC_HIGH"],"lscType":"I_LSC_IMM"},{"vin":"WZZVP72061VD49230","model":"X1
+        X18D","bodytype":"E84","driveTrain":"CONV","fuelType":"DIESEL","color":"VALENCIA
+        ORANGE METALLIC","colorCode":"B44","brand":"BMW","licensePlate":"YY18 XXX","yearOfConstruction":2014,"statisticsCommunityEnabled":false,"statisticsAvailable":false,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"Stratstone
+        Leeds","street":"Gelderd Road","postalCode":"LS12 6EG","city":"Leeds","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"NOT_SUPPORTED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"NOT_SUPPORTED","doorLock":"NOT_SUPPORTED","doorUnlock":"NOT_SUPPORTED","climateControl":"NOT_SUPPORTED","climateNow":"NOT_SUPPORTED","chargingControl":"NOT_SUPPORTED","chargeNow":"NOT_SUPPORTED","sendPoi":"NOT_SUPPORTED","rangeMap":"NOT_SUPPORTED","lastDestinations":"NOT_SUPPORTED","intermodalRouting":"NOT_AVAILABLE","climateFunction":"VENTILATION","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","lscType":"NOT_SUPPORTED"}]}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:23 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/destinations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:24 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      X-Nodeid:
+      - '02'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"destinations":[{"lat":54.136661529541016,"lon":-2.723912000656128,"country":"UNITED
+        KINGDOM","city":"CARNFORTH","street":"CAPERNWRAY ROAD","type":"DESTINATION","createdAt":"2016-04-30T09:08:01+0200"}]}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:24 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/status
+    body:
+      encoding: UTF-8
+      string: deviceTime=2016-05-10T15%3A04%3A24
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:24 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      X-Nodeid:
+      - '02'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"vehicleStatus":{"vin":"WZY1Z42090V247772","mileage":44558,"updateReason":"DOOR_STATE_CHANGED","updateTime":"2016-05-09T17:31:46+0200","doorDriverFront":"CLOSED","doorDriverRear":"CLOSED","doorPassengerFront":"CLOSED","doorPassengerRear":"CLOSED","windowDriverFront":"CLOSED","windowDriverRear":"CLOSED","windowPassengerFront":"CLOSED","windowPassengerRear":"CLOSED","trunk":"CLOSED","rearWindow":"INVALID","hood":"CLOSED","doorLockState":"SECURED","parkingLight":"OFF","positionLight":"OFF","remainingFuel":0,"remainingRangeElectric":48,"remainingRangeElectricMls":29,"remainingRangeFuel":0,"remainingRangeFuelMls":0,"maxRangeElectric":110,"maxRangeElectricMls":68,"fuelPercent":0,"maxFuel":9,"connectionStatus":"DISCONNECTED","chargingStatus":"INVALID","chargingLevelHv":47,"lastChargingEndReason":"UNKNOWN","lastChargingEndResult":"FAILED","position":{"lat":53.69011,"lon":-1.2890642,"heading":90,"status":"OK"},"internalDataTimeUTC":"2016-05-09T15:31:46","singleImmediateCharging":false}}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:28 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/statistics/allTrips
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:28 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
+      X-Nodeid:
+      - '01'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"allTrips":{"avgElectricConsumption":{"communityLow":0,"communityAverage":16.79,"communityHigh":34.55,"userAverage":17.87},"avgRecuperation":{"communityLow":0,"communityAverage":3.68,"communityHigh":13.85,"userAverage":2.72},"chargecycleRange":{"communityAverage":119.26,"communityHigh":200,"userAverage":74.58,"userHigh":121.52,"userCurrentChargeCycle":62},"totalElectricDistance":{"communityLow":3,"communityAverage":14550.34,"communityHigh":98826.02,"userTotal":36899.28},"avgCombinedConsumption":{"communityLow":0,"communityAverage":1.27,"communityHigh":6.66,"userAverage":2.06},"savedCO2":1023.106,"savedCO2greenEnergy":6018.272,"totalSavedFuel":0,"resetDate":"1970-01-01T01:00:00+0100"}}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:29 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/statistics/lastTrip
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:29 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
+      X-Nodeid:
+      - '01'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"lastTrip":{"efficiencyValue":0.54,"totalDistance":33,"electricDistance":33,"avgElectricConsumption":18.1,"avgRecuperation":1,"drivingModeValue":0,"accelerationValue":0.37,"anticipationValue":0.84,"totalConsumptionValue":0.74,"auxiliaryConsumptionValue":0.76,"avgCombinedConsumption":0,"electricDistanceRatio":100,"savedFuel":0,"date":"2016-05-09T16:20:00+0200","duration":29}}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:32 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/rangemap
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:33 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
+      X-Nodeid:
+      - '01'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"rangemap":{"center":{"lat":53.69011,"lon":-1.2890642},"quality":"AVERAGE","rangemaps":[{"type":"ECO_PRO_PLUS","polyline":[{"lat":53.667848110199,"lon":-1.94857120513916},{"lat":53.6372923851013,"lon":-1.91475391387939},{"lat":53.5980892181396,"lon":-1.92848682403564},{"lat":53.5681772232056,"lon":-1.84645414352417},{"lat":53.5465264320374,"lon":-1.77729606628418},{"lat":53.5094475746155,"lon":-1.71227931976318},{"lat":53.49045753479,"lon":-1.64267063140869},{"lat":53.4620690345764,"lon":-1.61928176879883},{"lat":53.4058928489685,"lon":-1.54460906982422},{"lat":53.3671617507935,"lon":-1.4887547492981},{"lat":53.3522272109985,"lon":-1.49032115936279},{"lat":53.3554458618164,"lon":-1.41099214553833},{"lat":53.2902789115906,"lon":-1.29445552825928},{"lat":53.3154916763306,"lon":-1.26016616821289},{"lat":53.2792282104492,"lon":-1.10843896865845},{"lat":53.2524490356445,"lon":-0.98113059997559},{"lat":53.2540798187256,"lon":-0.91931104660034},{"lat":53.3297181129456,"lon":-0.90909719467163},{"lat":53.39031457901,"lon":-0.77455759048462},{"lat":53.392481803894,"lon":-0.77419281005859},{"lat":53.4933543205261,"lon":-0.78211069107056},{"lat":53.5566544532776,"lon":-0.74775695800781},{"lat":53.5901713371277,"lon":-0.68321228027344},{"lat":53.6070156097412,"lon":-0.69722414016724},{"lat":53.6729550361633,"lon":-0.77468633651733},{"lat":53.7250757217407,"lon":-0.52624940872192},{"lat":53.7418985366821,"lon":-0.58369159698486},{"lat":53.8189315795898,"lon":-0.61414003372192},{"lat":53.8568687438965,"lon":-0.66261291503906},{"lat":53.8279223442078,"lon":-0.87319850921631},{"lat":53.8946342468262,"lon":-0.89356184005737},{"lat":53.94287109375,"lon":-0.86719036102295},{"lat":53.9940476417542,"lon":-0.9049129486084},{"lat":54.035975933075,"lon":-0.9573769569397},{"lat":54.0489792823792,"lon":-1.03621244430542},{"lat":54.0591073036194,"lon":-1.108717918396},{"lat":54.0695357322693,"lon":-1.19534254074097},{"lat":54.0254831314087,"lon":-1.31720066070557},{"lat":54.0987396240234,"lon":-1.3968300819397},{"lat":54.0270495414734,"lon":-1.46083831787109},{"lat":54.0073084831238,"lon":-1.5510892868042},{"lat":53.9948415756226,"lon":-1.58578634262085},{"lat":53.9392232894897,"lon":-1.64063215255737},{"lat":53.9307689666748,"lon":-1.67590856552124},{"lat":53.929009437561,"lon":-1.79422616958618},{"lat":53.876781463623,"lon":-1.88492774963379},{"lat":53.8286948204041,"lon":-1.95318460464478},{"lat":53.7994694709778,"lon":-1.90486192703247},{"lat":53.7322211265564,"lon":-1.9865083694458},{"lat":53.667848110199,"lon":-1.94857120513916}]},{"type":"COMFORT","polyline":[{"lat":53.6910653114319,"lon":-1.84898614883423},{"lat":53.6393523216248,"lon":-1.84334278106689},{"lat":53.6213064193726,"lon":-1.83791399002075},{"lat":53.5604739189148,"lon":-1.76158905029297},{"lat":53.5688424110413,"lon":-1.69931888580322},{"lat":53.5249400138855,"lon":-1.67142391204834},{"lat":53.5216999053955,"lon":-1.61273717880249},{"lat":53.5058641433716,"lon":-1.56553030014038},{"lat":53.4645795822144,"lon":-1.49087905883789},{"lat":53.4337449073792,"lon":-1.45010948181152},{"lat":53.4083819389343,"lon":-1.42257928848267},{"lat":53.3977389335632,"lon":-1.34902238845825},{"lat":53.3576560020447,"lon":-1.28443479537964},{"lat":53.3893918991089,"lon":-1.25653982162476},{"lat":53.3191609382629,"lon":-1.10831022262573},{"lat":53.2922315597534,"lon":-1.0247540473938},{"lat":53.3176159858704,"lon":-0.97102403640747},{"lat":53.4064722061157,"lon":-0.91907501220703},{"lat":53.4481644630432,"lon":-0.96226930618286},{"lat":53.4890413284302,"lon":-0.83820104598999},{"lat":53.4885478019714,"lon":-0.83423137664795},{"lat":53.5679626464844,"lon":-0.81187248229981},{"lat":53.584463596344,"lon":-0.81483364105225},{"lat":53.649115562439,"lon":-0.77620983123779},{"lat":53.6617755889893,"lon":-0.769944190979},{"lat":53.6904215812683,"lon":-0.83217144012451},{"lat":53.7770676612854,"lon":-0.65909385681152},{"lat":53.8061857223511,"lon":-0.78981399536133},{"lat":53.8388228416443,"lon":-0.76234817504883},{"lat":53.8279223442078,"lon":-0.87319850921631},{"lat":53.8639497756958,"lon":-0.90231657028198},{"lat":53.8995480537415,"lon":-0.96518754959106},{"lat":53.9602088928223,"lon":-1.00336074829102},{"lat":53.9819240570068,"lon":-1.04631900787354},{"lat":53.9962792396545,"lon":-1.08962059020996},{"lat":54.003746509552,"lon":-1.13976716995239},{"lat":53.9479994773865,"lon":-1.27304077148438},{"lat":54.0046906471252,"lon":-1.33307933807373},{"lat":54.0131235122681,"lon":-1.37957811355591},{"lat":54.0067505836487,"lon":-1.43229961395264},{"lat":53.9666891098022,"lon":-1.52780771255493},{"lat":53.9619469642639,"lon":-1.53825759887695},{"lat":53.8993978500366,"lon":-1.60784482955933},{"lat":53.9040327072144,"lon":-1.63222074508667},{"lat":53.8739705085754,"lon":-1.71313762664795},{"lat":53.8355612754822,"lon":-1.80117845535278},{"lat":53.8102626800537,"lon":-1.83578968048096},{"lat":53.7916588783264,"lon":-1.8651008605957},{"lat":53.7300968170166,"lon":-1.86977863311768},{"lat":53.6910653114319,"lon":-1.84898614883423}]}]}}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:37 GMT
+- request:
+    method: get
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/chargingprofile
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:04:38 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
+      X-Nodeid:
+      - '01'
+      X-Powered-By:
+      - JOY
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"weeklyPlanner":{"climatizationEnabled":true,"chargingMode":"IMMEDIATE_CHARGING","chargingPreferences":"NO_PRESELECTION","timer1":{"departureTime":"06:45","timerEnabled":false,"weekdays":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"]},"timer2":{"departureTime":"06:30","timerEnabled":false,"weekdays":[]},"timer3":{"departureTime":"06:19","timerEnabled":false,"weekdays":[]},"overrideTimer":{"weekdays":[]},"preferredChargingWindow":{"enabled":false,"startTime":"20:00","endTime":"16:00"}}}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:04:38 GMT
+- request:
+    method: post
+    uri: https://b2vapi.bmwgroup.com/webapi/v1/user/vehicles/WZY1Z42090V247772/sendpoi
+    body:
+      encoding: UTF-8
+      string: data=%7B%22poi%22%3A%7B%22street%22%3A%22street%22%2C%22city%22%3A%22city%22%2C%22country%22%3A%22country%22%2C%22postalCode%22%3A%22postalCode%22%2C%22subject%22%3A%22subject%22%2C%22lat%22%3A%2253.69822%22%2C%22lon%22%3A%22-1.266915%22%2C%22additionalInfo%22%3A%22info%22%2C%22name%22%3A%22name%22%2C%22useAsDestination%22%3A%22true%22%7D%7D
+    headers:
+      User-Agent:
+      - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
+      Authorization:
+      - Bearer iWGPNniEIJBGLlSuC2Mr3kCE4yfSknZl
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Tue, 10 May 2016 14:05:59 GMT
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      X-Nodeid:
+      - '02'
+      X-Powered-By:
+      - JOY
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/plain
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 10 May 2016 14:06:00 GMT
+recorded_with: VCR 3.0.1

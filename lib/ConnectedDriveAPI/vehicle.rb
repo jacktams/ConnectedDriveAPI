@@ -1,6 +1,6 @@
 module ConnectedDriveAPI
   class Vehicle
-    attr_reader :api, :email, :id, :vehicle
+    attr_reader :api, :email, :vin, :vehicle
     
     def initialize(api, vin, vehicle)
       @api = api
@@ -9,23 +9,23 @@ module ConnectedDriveAPI
     end
     
     def status()
-      api.get("/vehicles/#{vin}/status",
+      api.get("/user/vehicles/#{vin}/status",
         body: {
           "deviceTime" => Time.new.strftime("%Y-%m-%dT%H:%M:%S")
         }
-      )
+      )["vehicleStatus"]
     end
     
     def lastTrip()
-      api.get("/user/vehicles/#{vin}/statistics/lastTrip")
+      api.get("/user/vehicles/#{vin}/statistics/lastTrip")["lastTrip"]
     end
     
     def allTrips()
-      api.get("/user/vehicles/#{vin}/statistics/allTrips")      
+      api.get("/user/vehicles/#{vin}/statistics/allTrips")["allTrips"]      
     end
     
     def rangeMap()
-      api.get("/user/vehicles/#{vin}/rangemap")      
+      api.get("/user/vehicles/#{vin}/rangemap")["rangemap"]      
     end
     
     def destinations()
@@ -34,6 +34,14 @@ module ConnectedDriveAPI
     
     def chargingProfile()
       api.get("/user/vehicles/#{vin}/chargingprofile")      
+    end
+    
+    def sendPOI(poi)
+      api.post("/user/vehicles/#{vin}/sendpoi",
+      body: {
+        "data" => "#{poi}"
+      }
+      )
     end
     
   end

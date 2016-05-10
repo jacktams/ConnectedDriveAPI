@@ -6,6 +6,8 @@
 /doc/
 /pkg/
 /spec/reports/
+/spec/cassettes/process.sh
+/spec/cassettes/*.bak
 /coverage
 /tmp/
 /.env

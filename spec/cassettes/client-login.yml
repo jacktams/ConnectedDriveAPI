@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 10 May 2016 08:24:58 GMT
+      - Tue, 10 May 2016 10:18:57 GMT
       Max-Forwards:
       - '20'
       Via:
-      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
       X-Nodeid:
-      - '02'
+      - '01'
       X-Powered-By:
       - JOY
       Content-Type:
@@ -34,10 +34,10 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: "{\r\n  \"access_token\": \"Y9FwHAwDsChGnVWLO5TtYMe5Gsgi5SP8\",\r\n
+      string: "{\r\n  \"access_token\": \"LJDE9iwER1feTlOC96p008LxVrZw2A1m\",\r\n
         \ \"token_type\": \"Bearer\",\r\n  \"expires_in\": 28800,\r\n  \"refresh_token\":
-        \"lVsTFVyE2U0Z5Gv6aDh8YdqgmaGAK7E2oS37Ol2dK1p5dwpf\",\r\n  \"scope\": \"vehicle_data
+        \"gG2MLu6OrQSYzN5VRCAVAknGL2NW6ZvlL1vRXFv8MzDB8jKl\",\r\n  \"scope\": \"vehicle_data
         remote_services\"\r\n}"
     http_version: 
-  recorded_at: Tue, 10 May 2016 08:25:00 GMT
+  recorded_at: Tue, 10 May 2016 10:18:59 GMT
 recorded_with: VCR 3.0.1

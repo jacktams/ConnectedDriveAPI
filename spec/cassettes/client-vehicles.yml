@@ -10,20 +10,20 @@ http_interactions:
       User-Agent:
       - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
       Authorization:
-      - Bearer Y9FwHAwDsChGnVWLO5TtYMe5Gsgi5SP8
+      - Bearer LJDE9iwER1feTlOC96p008LxVrZw2A1m
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 10 May 2016 08:24:59 GMT
+      - Tue, 10 May 2016 10:18:58 GMT
       Max-Forwards:
       - '20'
       Via:
-      - 1.0 lpb2vcn02 (BMW Group API Gateway)
+      - 1.0 lpb2vcn01 (BMW Group API Gateway)
       X-Nodeid:
-      - '02'
+      - '01'
       X-Powered-By:
       - JOY
       Content-Type:
@@ -32,12 +32,12 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"vehicles":[{"vin":"<VIN>","model":"I3 (+ REX)","bodytype":"I01","driveTrain":"BEV_REX","color":"ARRAVANIGRAU/BMW
-        I BLAU","colorCode":"B74","brand":"BMW_I","licensePlate":"<REG>","yearOfConstruction":2014,"statisticsCommunityEnabled":true,"statisticsAvailable":true,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"BMW
-        UK Ltd","street":"Summit ONE","postalCode":"GU14 0FB","city":"Farnborough","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"ACTIVATED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"ACTIVATED","doorLock":"ACTIVATED","doorUnlock":"ACTIVATED","climateControl":"NOT_SUPPORTED","climateNow":"ACTIVATED","chargingControl":"WEEKLY_PLANNER","chargeNow":"NOT_SUPPORTED","sendPoi":"ACTIVATED","rangeMap":"RANGE_POLYGON","lastDestinations":"SUPPORTED","intermodalRouting":"AVAILABLE","climateFunction":"AIRCONDITIONING","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","supportedChargingModes":["AC_LOW","AC_HIGH"],"lscType":"I_LSC_IMM"},{"vin":"<VIN>","model":"X1
+      string: '{"vehicles":[{"vin":"WZY1Z42090V247772","model":"I3 (+ REX)","bodytype":"I01","driveTrain":"BEV_REX","color":"ARRAVANIGRAU/BMW
+        I BLAU","colorCode":"B74","brand":"BMW_I","licensePlate":"YY18XXX","yearOfConstruction":2014,"statisticsCommunityEnabled":true,"statisticsAvailable":true,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"BMW
+        UK Ltd","street":"Summit ONE","postalCode":"GU14 0FB","city":"Farnborough","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"ACTIVATED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"ACTIVATED","doorLock":"ACTIVATED","doorUnlock":"ACTIVATED","climateControl":"NOT_SUPPORTED","climateNow":"ACTIVATED","chargingControl":"WEEKLY_PLANNER","chargeNow":"NOT_SUPPORTED","sendPoi":"ACTIVATED","rangeMap":"RANGE_POLYGON","lastDestinations":"SUPPORTED","intermodalRouting":"AVAILABLE","climateFunction":"AIRCONDITIONING","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","supportedChargingModes":["AC_LOW","AC_HIGH"],"lscType":"I_LSC_IMM"},{"vin":"WZZVP72061VD49230","model":"X1
         X18D","bodytype":"E84","driveTrain":"CONV","fuelType":"DIESEL","color":"VALENCIA
-        ORANGE METALLIC","colorCode":"B44","brand":"BMW","licensePlate":"<REG>","yearOfConstruction":2014,"statisticsCommunityEnabled":false,"statisticsAvailable":false,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"Stratstone
+        ORANGE METALLIC","colorCode":"B44","brand":"BMW","licensePlate":"YY18 XXX","yearOfConstruction":2014,"statisticsCommunityEnabled":false,"statisticsAvailable":false,"hub":"HUB_ECE","hasAlarmSystem":true,"dealer":{"name":"Stratstone
         Leeds","street":"Gelderd Road","postalCode":"LS12 6EG","city":"Leeds","country":"GB"},"countryCode":"V1-UK","vehicleFinder":"NOT_SUPPORTED","remote360":"NOT_SUPPORTED","hornBlow":"NOT_SUPPORTED","lightFlash":"NOT_SUPPORTED","doorLock":"NOT_SUPPORTED","doorUnlock":"NOT_SUPPORTED","climateControl":"NOT_SUPPORTED","climateNow":"NOT_SUPPORTED","chargingControl":"NOT_SUPPORTED","chargeNow":"NOT_SUPPORTED","sendPoi":"NOT_SUPPORTED","rangeMap":"NOT_SUPPORTED","lastDestinations":"NOT_SUPPORTED","intermodalRouting":"NOT_AVAILABLE","climateFunction":"VENTILATION","onlineSearchMode":"MAP","smartSolution":"NOT_SUPPORTED","lscType":"NOT_SUPPORTED"}]}'
     http_version: 
-  recorded_at: Tue, 10 May 2016 08:25:01 GMT
+  recorded_at: Tue, 10 May 2016 10:19:00 GMT
 recorded_with: VCR 3.0.1

@@ -61,6 +61,6 @@ module ConnectedDriveAPI
     def vehicles
       self.class.get("/user/vehicles")["vehicles"].map { |v| Vehicle.new( self.class, v["vin"], v ) }
     end
-        
+    
   end
 end

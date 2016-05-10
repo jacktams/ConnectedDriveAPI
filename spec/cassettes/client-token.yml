@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 10 May 2016 08:25:00 GMT
+      - Tue, 10 May 2016 10:18:59 GMT
       Max-Forwards:
       - '20'
       Via:
@@ -34,18 +34,18 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: "{\r\n  \"access_token\": \"SAEH0XabdnCUlb5nmekaDXirZBTW4hvf\",\r\n
+      string: "{\r\n  \"access_token\": \"udBCGQSDVOisd58HCtLUJifTG9UL8WLx\",\r\n
         \ \"token_type\": \"Bearer\",\r\n  \"expires_in\": 28800,\r\n  \"refresh_token\":
-        \"3w4toDpraJyUBDT90HAh8whvyAekXLgsNc6qNXHyXVQ7R3aO\",\r\n  \"scope\": \"vehicle_data
+        \"3QN6RdvGTqRFGTE2A5EzErxEuR770Nf58T4jhuQrst4crTEI\",\r\n  \"scope\": \"vehicle_data
         remote_services\"\r\n}"
     http_version: 
-  recorded_at: Tue, 10 May 2016 08:25:02 GMT
+  recorded_at: Tue, 10 May 2016 10:19:01 GMT
 - request:
     method: post
     uri: https://b2vapi.bmwgroup.com/webapi/oauth/token
     body:
       encoding: UTF-8
-      string: grant_type=refresh_token&refresh_token=3w4toDpraJyUBDT90HAh8whvyAekXLgsNc6qNXHyXVQ7R3aO
+      string: grant_type=refresh_token&refresh_token=3QN6RdvGTqRFGTE2A5EzErxEuR770Nf58T4jhuQrst4crTEI
     headers:
       User-Agent:
       - MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)
@@ -59,7 +59,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 10 May 2016 08:25:01 GMT
+      - Tue, 10 May 2016 10:18:59 GMT
       Server:
       - BMW Group API Gateway
       X-Nodeid:
@@ -74,12 +74,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "access_token" : "vaAV22K9x8XchhR8CRrczTj1fOL3ANTa",
+          "access_token" : "3TFjCF8qxBcgnHtofhEnm34UkNNAJuxa",
           "token_type" : "Bearer",
           "expires_in" : 28800,
-          "refresh_token" : "2nhXcBA9A8EntnAw1lLKoNXdtjiM9RlnLzfRMyRHOkCxz5or",
+          "refresh_token" : "31DIVWxkwB4fsiZ960NpiWin0tJgkpjzFf7WD6rR0Gw5n47L",
           "scope" : "vehicle_data remote_services"
         }
     http_version: 
-  recorded_at: Tue, 10 May 2016 08:25:02 GMT
+  recorded_at: Tue, 10 May 2016 10:19:01 GMT
 recorded_with: VCR 3.0.1
