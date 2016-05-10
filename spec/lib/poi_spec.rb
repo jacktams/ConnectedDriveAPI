@@ -5,7 +5,6 @@ RSpec.describe ConnectedDriveAPI::POI do
   
   describe "POI" do
     it "sets a valid address" do
-      puts "#{poi}"
       expect(poi.street).to eq("street")
       expect(poi.city).to eq("city")
       expect(poi.country).to eq("country")
