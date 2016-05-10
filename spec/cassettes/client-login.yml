@@ -24,8 +24,6 @@ http_interactions:
       - '20'
       Via:
       - 1.0 lpb2vcn02 (BMW Group API Gateway)
-      X-Correlationid:
-      - Id-db9a315793f5560000000000c50cd8bf 0
       X-Nodeid:
       - '02'
       X-Powered-By:
