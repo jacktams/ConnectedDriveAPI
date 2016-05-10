@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/jacktams/ConnectedDriveAPI.svg?branch=master)](https://travis-ci.org/jacktams/ConnectedDriveAPI)
+[![Coverage Status](https://coveralls.io/repos/github/jacktams/ConnectedDriveAPI/badge.svg?branch=master)](https://coveralls.io/github/jacktams/ConnectedDriveAPI?branch=master)
+
 # ConnectedDriveAPI
 
 Work in progress reverse engineering of BMW Connected Drive APIs, focussed on the i3/i8 utilities but generic features should work for 
