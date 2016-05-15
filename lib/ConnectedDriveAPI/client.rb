@@ -2,7 +2,11 @@ module ConnectedDriveAPI
   class Client
     include HTTParty
       
-    base_uri "https://b2vapi.bmwgroup.com/webapi/v1"
+    PROD_ECE    = "https://b2vapi.bmwgroup.com"
+    PROD_US     = "https://b2vapi.bmwgroup.us"
+    PROD_CN     = "https://b2vapi.bmwgroup.cn:8592"
+    
+    base_uri "#{PROD_ECE}/webapi/v1"
     
     attr_reader :email, :refresh_token, :client_secret, :token
     
@@ -24,7 +28,7 @@ module ConnectedDriveAPI
     
     def update_token()
       response = self.class.post(
-        "https://b2vapi.bmwgroup.com/webapi/oauth/token",
+        "#{PROD_ECE}/webapi/oauth/token",
         headers: {
           "Content-Type" => "application/x-www-form-urlencoded",
           "Authorization" => "Basic #{@client_secret}"
@@ -41,7 +45,7 @@ module ConnectedDriveAPI
     
     def login!(password)
       response = self.class.post(
-        "https://b2vapi.bmwgroup.com/webapi/oauth/token",
+        "#{PROD_ECE}/webapi/oauth/token",
         headers: {
           "Content-Type" => "application/x-www-form-urlencoded",
           "Authorization" => "Basic #{@client_secret}"
