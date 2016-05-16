@@ -2,19 +2,23 @@ module ConnectedDriveAPI
   class Client
     include HTTParty
       
-    PROD_ECE    = "https://b2vapi.bmwgroup.com"
-    PROD_US     = "https://b2vapi.bmwgroup.us"
-    PROD_CN     = "https://b2vapi.bmwgroup.cn:8592"
+    HUB_ECE    = "https://b2vapi.bmwgroup.com"
+    HUB_US     = "https://b2vapi.bmwgroup.us"
+    HUB_CN     = "https://b2vapi.bmwgroup.cn:8592"
     
-    base_uri "#{PROD_ECE}/webapi/v1"
+    attr_reader :email, :refresh_token, :client_secret, :token, :hub
     
-    attr_reader :email, :refresh_token, :client_secret, :token
-    
-    def initialize( email, client_secret )
+    def initialize( email, client_secret, hub=Client::HUB_ECE )
       @email = email
       @client_secret = client_secret
+        
       self.class.headers "User-Agent"   => "MCVApp/1.5.2 (iPhone; iOS 9.1; Scale/2.00)"
-
+      self.update_hub( hub )
+    end
+    
+    def update_hub( hub )
+      @hub = hub
+      self.class.base_uri "#{@hub}/webapi/v1"
     end
     
     def token=(token)
@@ -28,7 +32,7 @@ module ConnectedDriveAPI
     
     def update_token()
       response = self.class.post(
-        "#{PROD_ECE}/webapi/oauth/token",
+        "#{@hub}/webapi/oauth/token",
         headers: {
           "Content-Type" => "application/x-www-form-urlencoded",
           "Authorization" => "Basic #{@client_secret}"
@@ -45,7 +49,7 @@ module ConnectedDriveAPI
     
     def login!(password)
       response = self.class.post(
-        "#{PROD_ECE}/webapi/oauth/token",
+        "#{@hub}/webapi/oauth/token",
         headers: {
           "Content-Type" => "application/x-www-form-urlencoded",
           "Authorization" => "Basic #{@client_secret}"
