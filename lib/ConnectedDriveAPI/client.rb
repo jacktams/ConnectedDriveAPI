@@ -8,6 +8,8 @@ module ConnectedDriveAPI
     
     attr_reader :email, :refresh_token, :client_secret, :token, :hub
     
+    # Initialises client, hub defaults to HUB_ECE, but can be HUB_US or HUB_CN
+    # it is assumed that the HUB is constant for the lifetime of the object.
     def initialize( email, client_secret, hub=Client::HUB_ECE )
       @email = email
       @client_secret = client_secret

@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jack Tams"]
   spec.email         = ["jack@jacktams.co.uk"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Allows interaction with the BMW Connected Drive Webservices API.}
   spec.homepage      = "http://jack.sh"
   spec.license       = "MIT"
 
